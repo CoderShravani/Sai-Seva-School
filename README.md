@@ -88,28 +88,6 @@ npm run dev
 
 The application will start on port 3000 (accessible at `http://localhost:3000`).
 
-## Environment Configuration
-
-Copy `.env.example` to create your local `.env` file:
-
-```bash
-cp .env.example .env
-```
-
-The application uses the following environment variables:
-
-| Variable Name | Purpose | Default / Fallback |
-| :--- | :--- | :--- |
-| `RESEND_API_KEY` | API key from Resend for sending emails from API routes | Optional in local dev (logs to console if missing) |
-| `ADMISSION_TO_EMAIL` | Recipient email for student admission queries | `shreesaiseva.shivane.pune@gmail.com` |
-| `DONATION_TO_EMAIL` | Recipient email for donation and 80G receipt queries | `shreesaiseva.shivane.pune@gmail.com` |
-| `CONTACT_TO_EMAIL` | Recipient email for campus visit and general queries | `shreesaiseva.shivane.pune@gmail.com` |
-| `VOLUNTEER_TO_EMAIL` | Recipient email for volunteer registrations | `shreesaiseva.shivane.pune@gmail.com` |
-| `ADMISSION_FROM_EMAIL`| Verified sender address for admission emails | `Shree Sai School Admissions <onboarding@resend.dev>` |
-| `DONATION_FROM_EMAIL` | Verified sender address for donation emails | `Shree Sai School Donations <onboarding@resend.dev>` |
-| `SCHOOL_WEBSITE_URL` | Canonical URL included in email body links | Defaults to `APP_URL` or empty |
-
-*Note: In local development, if `RESEND_API_KEY` is not provided, the API routes simulate successful submissions and log the enquiry payload to the server console.*
 
 ## Available Commands
 
@@ -121,18 +99,9 @@ The following scripts are defined in `package.json`:
 - `npm run lint`: Runs `tsc --noEmit` to validate all TypeScript code across the project.
 - `npm run clean`: Cleans build artifacts (`dist/` and `server.js`).
 
-## API Routes
 
-Serverless API routes are located in `/api` and are invoked directly by the frontend forms:
 
-- `POST /api/admission-enquiry`: Validates parent contact information, student details, disability type, and residential care requirements, sending a formatted email to the admissions coordinator.
-- `POST /api/donation-enquiry`: Receives donor pledges, sponsorship preferences (meals, learning kits, groceries), and 80G receipt requests.
-- `POST /api/enquiry-form`: Receives campus visit bookings and general inquiries.
-- `POST /api/volunteer-enquiry`: Receives community volunteer applications and skill offers.
-
-All handlers include honeypot anti-spam verification, string length validation, and HTML entity escaping.
-
-## Production Build and Deployment
+## Production Build
 
 ### Build Verification
 
@@ -142,15 +111,7 @@ Run the production build:
 npm run build
 ```
 
-The output bundle will be placed in `dist/`, containing minified JavaScript, CSS, and optimized static assets.
 
-### Deployment Platforms
 
-- **Vercel:** Connect the repository to Vercel. Vercel automatically detects the Vite build (`npm run build`, output directory `dist`) and mounts files in `/api` as serverless functions. Add `RESEND_API_KEY` in Vercel Project Settings under Environment Variables.
-- **Other Static Hosts:** If deploying only the static frontend to Netlify, Cloudflare Pages, or GitHub Pages, ensure form submissions either connect to an external serverless endpoint or third-party form handler.
 
-## Maintenance and Security
 
-- **Protecting Secrets:** Never commit `.env` or files containing private credentials. All secret keys must be configured via hosting environment variables.
-- **Dependency Hygiene:** Avoid ad-hoc dependency modifications without testing the build. Keep `bun.lock` or `package-lock.json` in sync with `package.json`.
-- **Content Verification:** When updating school contact details, bank accounts, or trust registration data, update both the English and Marathi entries in `src/data/schoolData.ts` to ensure bilingual parity.
