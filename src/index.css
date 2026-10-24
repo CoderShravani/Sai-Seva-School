@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* High contrast mode overrides */
+.high-contrast {
+  --tw-bg-opacity: 1 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .bg-white,
+.high-contrast .bg-amber-50,
+.high-contrast .bg-stone-50,
+.high-contrast .bg-orange-50 {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border-color: #f59e0b !important;
+}
+
+.high-contrast .text-stone-600,
+.high-contrast .text-stone-700,
+.high-contrast .text-stone-500,
+.high-contrast .text-stone-800 {
+  color: #f3f4f6 !important;
+}
+
+.high-contrast a,
+.high-contrast button {
+  outline: 2px solid transparent;
+}
+
+.high-contrast a:focus,
+.high-contrast button:focus {
+  outline: 3px solid #fbbf24 !important;
+}
+
+/* Dyslexia friendly font */
+.font-dyslexic {
+  font-family: 'Comic Sans MS', 'Trebuchet MS', 'Arial', sans-serif !important;
+  letter-spacing: 0.05em !important;
+  word-spacing: 0.1em !important;
+  line-height: 1.8 !important;
+}
+
+/* Print styles for Admission & Document Checklist */
+@media print {
+  header, footer, .no-print, .accessibility-toolbar {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+  .print-area {
+    display: block !important;
+    width: 100% !important;
+  }
+}
