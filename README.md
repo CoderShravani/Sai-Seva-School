@@ -1,6 +1,6 @@
 # Shree Sai Seva Niwasi Matimand School Website
 
-Official website for Shree Sai Seva Niwasi Matimand School (run by Chaitanya Sevabhavi Sanstha, Registration No. MAH/1428/2010/TRUST), located in Dangat Industrial Estate, Shivane, Pune – 411023, Maharashtra, India.
+Official website for Shree Sai Seva Niwasi Matimand School (run by Chaitanya Sevabhavi Sanstha), located in Dangat Industrial Estate, Shivane, Pune – 411023, Maharashtra, India.
 
 The school is a dedicated residential special school providing academic education, daily living skills, speech and motor therapy, vocational training, and residential hostel care for children and young adults with intellectual and developmental challenges.
 
