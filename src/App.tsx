@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import { AccessibilityProvider } from './context/AccessibilityContext';
 import { SchoolDataProvider } from './context/SchoolDataContext';
@@ -31,9 +31,80 @@ import { CoCurricularPage } from './pages/CoCurricularPage';
 import { CounsellingPage } from './pages/CounsellingPage';
 import { GalleryItem } from './types';
 
+type RouteState = {
+  activeTab: string;
+  selectedProgramId: string | null;
+};
+
+function getRouteState(pathname: string): RouteState {
+  const path = pathname.replace(/\/+$/, '') || '/';
+
+  const programRoutes: Record<string, string> = {
+    '/programs/academic': 'academic',
+    '/programs/therapy': 'therapy',
+    '/programs/lifeskills': 'lifeskills',
+    '/programs/vocational': 'vocational',
+    '/programs/cocurricular': 'cocurricular',
+    '/programs/counselling': 'counselling',
+  };
+
+  if (programRoutes[path]) {
+    return { activeTab: 'programs', selectedProgramId: programRoutes[path] };
+  }
+
+  const routes: Record<string, string> = {
+    '/': 'home',
+    '/about': 'about',
+    '/programs': 'programs',
+    '/facilities': 'facilities',
+    '/admissions': 'admissions',
+    '/gallery': 'gallery',
+    '/achievements': 'achievements',
+    '/donate': 'donate',
+    '/faq': 'faq',
+    '/contact': 'contact',
+    '/privacy': 'privacy',
+    '/terms': 'terms',
+  };
+
+  return { activeTab: routes[path] || 'home', selectedProgramId: null };
+}
+
+function routeForState(activeTab: string, selectedProgramId: string | null): string {
+  if (selectedProgramId) {
+    return `/programs/${selectedProgramId}`;
+  }
+
+  const routes: Record<string, string> = {
+    home: '/',
+    about: '/about',
+    programs: '/programs',
+    facilities: '/facilities',
+    admissions: '/admissions',
+    gallery: '/gallery',
+    achievements: '/achievements',
+    donate: '/donate',
+    faq: '/faq',
+    contact: '/contact',
+    privacy: '/privacy',
+    terms: '/terms',
+    'terms-conditions': '/terms',
+    'terms-disclaimer': '/terms',
+    academic: '/programs/academic',
+    therapy: '/programs/therapy',
+    lifeskills: '/programs/lifeskills',
+    vocational: '/programs/vocational',
+    cocurricular: '/programs/cocurricular',
+    counselling: '/programs/counselling',
+  };
+
+  return routes[activeTab] || '/';
+}
+
+
 export function MainAppContent() {
-  const [activeTab, setActiveTab] = useState<string>('home');
-  const [selectedProgramId, setSelectedProgramId] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<string>(() => getRouteState(window.location.pathname).activeTab);
+  const [selectedProgramId, setSelectedProgramId] = useState<string | null>(() => getRouteState(window.location.pathname).selectedProgramId);
   const [isAdmissionModalOpen, setIsAdmissionModalOpen] = useState(false);
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
   const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
@@ -41,7 +112,26 @@ export function MainAppContent() {
   const [isAdminConfigModalOpen, setIsAdminConfigModalOpen] = useState(false);
   const [selectedLightboxItem, setSelectedLightboxItem] = useState<GalleryItem | null>(null);
 
-  // Scroll to top whenever tab or selected program changes
+  // Keep the address synchronized with the selected page.
+useEffect(() => {
+  const syncFromUrl = () => {
+    const route = getRouteState(window.location.pathname);
+    setActiveTab(route.activeTab);
+    setSelectedProgramId(route.selectedProgramId);
+  };
+
+  window.addEventListener('popstate', syncFromUrl);
+  return () => window.removeEventListener('popstate', syncFromUrl);
+}, []);
+
+useEffect(() => {
+  const targetPath = routeForState(activeTab, selectedProgramId);
+
+  if (window.location.pathname !== targetPath) {
+    window.history.pushState({}, '', targetPath);
+  }
+}, [activeTab, selectedProgramId]);
+// Scroll to top whenever tab or selected program changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [activeTab, selectedProgramId]);
@@ -364,3 +454,4 @@ export default function App() {
     </LanguageProvider>
   );
 }
+
