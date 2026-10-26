@@ -213,7 +213,7 @@ export const ProgramsPage: React.FC<ProgramsPageProps> = ({
           <p className="text-xs sm:text-sm text-emerald-100 max-w-xl">
             {language === 'mr'
               ? 'आमचे तज्ज्ञ विशेष शिक्षक मुलाच्या क्षमतेचे मूल्यांकन करून योग्य शैक्षणिक व पुनर्वसन वर्ग सुचवतात.'
-              : 'Our RCI-certified special educators and therapists assess each child to determine the ideal individualized learning plan.'}
+              : 'Our specialized educators and therapists assess each child to determine the ideal individualized learning plan.'}
           </p>
         </div>
         <button
