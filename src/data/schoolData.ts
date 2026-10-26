@@ -148,13 +148,13 @@ export const PROGRAMS_DATA: ProgramItem[] = [
     descriptionEn: 'Art, music, dance, adaptive sports, and creative cultural events to build physical vitality, self-confidence, and joyous expression.',
     descriptionMr: 'चित्रकला, संगीत, नृत्य, मैदानी खेळ आणि सांस्कृतिक कार्यक्रमांद्वारे मुलांचा शारीरिक, मानसिक व भावनिक सर्वांगीण विकास.',
     highlightsEn: [
-      'Special Olympics adaptive sports disciplines & races',
+      'Special sports disciplines & races',
       'Music therapy, rhythm circles & folk dance rehearsals',
       'Daily morning yoga, Surya Namaskar & simplified asanas',
       'Grand annual gathering stage performances',
     ],
     highlightsMr: [
-      'विशेष ऑलिम्पिक क्रीडा सराव व खेळ',
+      'विशेष क्रीडा सराव व खेळ',
       'संगीत व ताल उपचार, भजने व लोकनृत्य',
       'सकाळचे सूर्यनमस्कार, प्राणायाम व योगासने',
       'भव्य वार्षिक स्नेहसंमेलन व रंगमंच सादरीकरण',
