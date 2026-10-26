@@ -435,7 +435,7 @@ export const DAILY_ROUTINE_DATA: DailyRoutineItem[] = [
     images: [
       '/16.jpg',
       '/17.jpg',
-      '/18.jpg',
+      '/34.jpg',
     ],
     imageCaptionsEn: [
       'Personalized Diksha Learning: Special Educator Guiding One-on-One Progress',
@@ -524,7 +524,7 @@ export const DAILY_ROUTINE_DATA: DailyRoutineItem[] = [
     descriptionEn: 'Daily afternoon assembly and heartfelt singing of Vande Mataram, cultivating discipline, togetherness, and patriotic respect.',
     descriptionMr: 'दुपारच्या सत्राच्या शेवटी सामूहिक वंदे मातरम् गायन, शिस्त व राष्ट्रीय एकात्मता.',
     iconName: 'IndiaFlag',
-    category: 'therapy',
+    category: 'assembly',
     images: [
       '/vande_matram.png',
     ],
