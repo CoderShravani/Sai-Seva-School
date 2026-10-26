@@ -456,17 +456,14 @@ export const DETAILED_PROGRAMS_DATA: DetailedProgram[] = [
     heroCaptionMr: 'शिक्षकांच्या प्रेमळ मार्गदर्शनाखाली मुले आनंदाने हस्तकला व नवनिर्मिती शिकताना',
     galleryImages: [
       '/1.jpg',
-      '/2.jpg',
       '/3.jpg',
     ],
     galleryCaptionsEn: [
       "Exhibition of Student-Made Handicrafts",
-      "Guided Exercise & Physical Training under Instructor Guidance",
       "Folklore & Cultural Performance by Students",
     ],
     galleryCaptionsMr: [
       "विद्यार्थ्यांनी तयार केलेल्या वस्तूंचे प्रदर्शन",
-      "मार्गदर्शकांच्या सूचनेनुसार शारीरिक व्यायाम व कसरत",
       "विद्यार्थ्यांचे लोकनृत्य व सांस्कृतिक सादरीकरण",
     ],
     iconName: 'Palette',
