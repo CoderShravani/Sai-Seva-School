@@ -216,8 +216,8 @@ export const HomePage: React.FC<HomePageProps> = ({
     {
       titleEn: 'Experienced & Compassionate Staff',
       titleMr: 'अनुभवी व संवेदनशील शिक्षक',
-      descEn: 'RCI-certified special educators, pediatric therapists, clinical psychologists and trained caretakers.',
-      descMr: 'आरसीआय मान्यताप्राप्त विशेष शिक्षक, प्रशिक्षित थेरपिस्ट आणि मुलांवर जिवापाड प्रेम करणारे कर्मचारी.',
+      descEn: 'Specialized educators, pediatric therapists, clinical psychologists and trained caretakers.',
+      descMr: 'विशेष शिक्षक, प्रशिक्षित थेरपिस्ट आणि मुलांवर जिवापाड प्रेम करणारे कर्मचारी.',
       icon: Users,
       circleBg: 'bg-[#FFF3E0]',
       iconColor: 'text-[#E65100]',
