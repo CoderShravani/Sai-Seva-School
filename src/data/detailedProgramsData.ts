@@ -28,7 +28,7 @@ export interface DetailedProgram {
   eligibilityMr: string;
   staffStudentRatio: string;
   weeklyHours: string;
-  certificationRci: string;
+  certification: string;
   image: string;
   heroCaptionEn?: string;
   heroCaptionMr?: string;
@@ -70,7 +70,7 @@ export const DETAILED_PROGRAMS_DATA: DetailedProgram[] = [
     eligibilityMr: 'वय वर्षे ६ ते १८; मतिमंदत्व (IQ ३५ ते ७०), ऑटिझम किंवा विकासात्मक विलंब असलेले विशेष विद्यार्थी.',
     staffStudentRatio: '1 : 6 (Dedicated Special Educator & Assistant)',
     weeklyHours: 'Monday – Saturday',
-    certificationRci: 'Dedicated Special Educators & Compassionate Caregivers',
+    certification: 'Dedicated Special Educators & Compassionate Caregivers',
     image: '/33.jpg',
     heroCaptionEn: 'Dedicated teacher gently guiding students on the path of knowledge and confidence',
     heroCaptionMr: 'ज्ञानाच्या व स्वावलंबनाच्या वाटेवर विद्यार्थ्यांना प्रेमाने मार्गदर्शन करणारी शिक्षक माऊली',
@@ -200,7 +200,7 @@ export const DETAILED_PROGRAMS_DATA: DetailedProgram[] = [
     eligibilityMr: 'ज्या मुलांना बोलण्यात अडचण आहे, चालताना तोल जातो किंवा आवाजाची व स्पर्शाची भीती वाटते अशा गरजू विद्यार्थ्यांना.',
     staffStudentRatio: '1 : 1 (Individual Attention During Sessions)',
     weeklyHours: 'Regular Weekly Sessions Based on Child Need',
-    certificationRci: 'Dedicated Therapists & Compassionate Care Team',
+    certification: 'Dedicated Therapists & Compassionate Care Team',
     image: '/therepist.jpg',
     heroCaptionEn: 'One-on-One Developmental Consultation & Caring Progress Assessment',
     heroCaptionMr: 'प्रत्येक मुलाशी आपुलकीने संवाद साधून वैयक्तिक प्रगतीचे मूल्यांकन',
@@ -323,7 +323,7 @@ export const DETAILED_PROGRAMS_DATA: DetailedProgram[] = [
     eligibilityMr: 'शाळेत प्रवेश घेतलेले सर्व विद्यार्थी—अगदी सुरुवातीच्या टप्प्यापासून ते प्रगत स्वावलंबनापर्यंत.',
     staffStudentRatio: '1 : 4 (Residential Hostel Caregiver Supervision)',
     weeklyHours: 'Daily Integrated Living Curriculum (7 Days / Week)',
-    certificationRci: 'Trained Residential House-Parents & Rehabilitation Assistants',
+    certification: 'Trained Residential House-Parents & Rehabilitation Assistants',
     image: '/44.png',
     heroCaptionEn: 'Daily Living Skills & Self-Care Mastery in Action',
     heroCaptionMr: 'दैनंदिन जीवन कौशल्ये आणि स्वावलंबनाचा प्रात्यक्षिक सराव',
@@ -450,7 +450,7 @@ export const DETAILED_PROGRAMS_DATA: DetailedProgram[] = [
     eligibilityMr: 'हाताची पकड असलेले व नवनवीन कलाकुसर शिकण्याची आवड असलेले सर्व विद्यार्थी.',
     staffStudentRatio: '1 : 5 (Dedicated Craft Teachers & Vocational Instructors)',
     weeklyHours: 'Monday – Saturday',
-    certificationRci: 'Experienced Vocational Instructors & Craft Teachers',
+    certification: 'Experienced Vocational Instructors & Craft Teachers',
     image: '/vocational.png',
     heroCaptionEn: 'Dedicated craft teachers lovingly guiding students as they discover the joy of creative handiwork',
     heroCaptionMr: 'शिक्षकांच्या प्रेमळ मार्गदर्शनाखाली मुले आनंदाने हस्तकला व नवनिर्मिती शिकताना',
@@ -586,7 +586,7 @@ export const DETAILED_PROGRAMS_DATA: DetailedProgram[] = [
     eligibilityMr: 'शाळेतील सर्व विद्यार्थी; प्रत्येकाला त्याच्या क्षमतेनुसार खेळ व उपक्रमांत प्रेमाने सहभागी करून घेतले जाते.',
     staffStudentRatio: '1 : 8 (Dedicated Sports Trainers & Activity Guides)',
     weeklyHours: 'Daily Morning Stretches & Afternoon Playtime',
-    certificationRci: 'Dedicated Sports Trainers & Creative Activity Guides',
+    certification: 'Dedicated Sports Trainers & Creative Activity Guides',
     image: '/cocurricular.png',
     heroCaptionEn: 'Discovering joy, friendships, and confidence through arts, sports, yoga, and cultural celebrations',
     heroCaptionMr: 'कला, खेळ, योग आणि सांस्कृतिक उपक्रमांतून आनंद, मैत्री व आत्मविश्वास अनुभवणारी मुले',
@@ -713,7 +713,7 @@ export const DETAILED_PROGRAMS_DATA: DetailedProgram[] = [
     eligibilityMr: 'शाळेतील सर्व विद्यार्थी; ज्यांना गरज भासेल तेव्हा प्रेमाने मार्गदर्शन व काळजी दिली जाते.',
     staffStudentRatio: '1 : 1 (Individual Attention & Attentive Care)',
     weeklyHours: 'According to the requirements of the students',
-    certificationRci: 'Dedicated Counselors & Caring Caregivers (Ayahs)',
+    certification: 'Dedicated Counselors & Caring Caregivers (Ayahs)',
     image: '/councelling.png',
     heroCaptionEn: 'Safe, heard, and supported: dedicated counselors and loving staff being there for every child',
     heroCaptionMr: 'मुलांना समजून घेणारे समुपदेशक आणि मायेने काळजी घेणाऱ्या आया',
