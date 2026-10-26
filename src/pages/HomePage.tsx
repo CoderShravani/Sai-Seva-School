@@ -182,8 +182,8 @@ export const HomePage: React.FC<HomePageProps> = ({
       tagEn: 'Creativity',
       tagMr: 'कला व क्रीडा',
       image: '/cocurricular.png',
-      highlightsEn: ['Special Olympics training', 'Music and rhythm therapy', 'Festival celebrations & drama'],
-      highlightsMr: ['विशेष ऑलिम्पिक क्रीडा सराव', 'संगीत व ताल उपचार', 'सण, उत्सव व नाट्य सादरीकरण'],
+      highlightsEn: ['Specialized games', 'Music and rhythm ', 'Festival celebrations'],
+      highlightsMr: ['क्रीडा सराव', 'संगीत व ताल', 'सण, उत्सव'],
     },
     {
       id: 'counselling',
